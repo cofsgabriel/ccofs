@@ -663,7 +663,7 @@ router.get('/textmaker/game', async (req, res, next) => {
         }
 })
 
-router.get('/textmaker/cofsc', async (req, res, next) => {
+router.get('/naruto/cofsc', async (req, res, next) => {
         var theme = req.query.theme,
              text = req.query.text,
              text2 = req.query.text2,
@@ -673,10 +673,10 @@ router.get('/textmaker/cofsc', async (req, res, next) => {
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'ccofs') return res.json(loghandler.invalidKey)
         if (!theme) return res.json(loghandler.nottheme)
-        if (theme != 'naruto' && theme != 'csgo') return res.json(loghandler.notheme)
+        if (theme != 'anime' && theme != 'csgo') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
 
-        if (theme == 'naruto') {
+        if (theme == 'anime') {
             try {
             request.post({
                 url: "https://photooxy.com/manga-and-anime/make-naruto-banner-online-free-378.html",
@@ -715,7 +715,7 @@ router.get('/textmaker/cofsc', async (req, res, next) => {
                 }
         } else if (theme == 'csgo') {
             request.post({
-                url: "https://photooxy.com/cs-go/great-cs-go-banner-131.html",
+                url: "https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html",
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
