@@ -772,7 +772,7 @@ router.get('/textmaker/anime', async (req, res, next) => {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: `text_1=${text}&text_2=${text2}login=OK`,
+                body: `text_1=${text}&text_2=${text2}&login=OK`,
                 }, (e,r,b) => {
                     if (!e) {
                         $ = cheerio.load(b)
